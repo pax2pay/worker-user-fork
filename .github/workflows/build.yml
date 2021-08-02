@@ -2,17 +2,14 @@ name: Build & Test
 
 on:
   pull_request:
-
-  workflow_dispatch:
+    branches:
+      - master
 
 jobs:
-  build-flow:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: webfactory/ssh-agent@v0.5.1
-        with:
-          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
       - uses: actions/cache@v2
         with:
           path: |
@@ -20,12 +17,17 @@ jobs:
             !~/cache/exclude
             **/node_modules
           key: ${{ runner.os }}-cache
-      - uses: actions/setup-node@v2
+      - name: "Setup Node"
+        uses: "actions/setup-node@v2"
         with:
-          node-version: '12.x'
-      - name: Run NPM tasks
-        run: |
-          npm install
-          npm run build
-          npm run lint
-          npm run test
+          node-version: 14
+      - name: Update NPM
+        run: npm install -g npm
+      - name: Install Dependencies
+        run: npm install
+      - name: Build
+        run: npm run build
+      - name: Lint
+        run: npm run lint
+      - name: Test
+        run: npm run test

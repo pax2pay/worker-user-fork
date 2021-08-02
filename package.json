@@ -1,6 +1,6 @@
 {
   "name": "@pax2pay/worker-user",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Cloudflare worker for user handling.",
   "author": "Pax2Pay Ltd.",
   "license": "UNLICENCED",
@@ -56,7 +56,7 @@
     "babel-core": "^6.26.3",
     "babel-jest": "^27.0.6",
     "cloudflare-worker-local": "^1.13.0",
-		"dotenv": "^10.0.0",
+    "dotenv": "^10.0.0",
     "eslint": "7.32.0",
     "eslint-plugin-prettierx": "github:nilssonemma/eslint-plugin-prettierx#master",
     "eslint-plugin-simple-import-sort": "^7.0.0",

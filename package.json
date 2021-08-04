@@ -1,6 +1,6 @@
 {
   "name": "@pax2pay/worker-user",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Cloudflare worker for user handling.",
   "author": "Pax2Pay Ltd.",
   "license": "UNLICENCED",

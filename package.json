@@ -76,6 +76,7 @@
     "@pax2pay/client": "^0.0.42",
     "@pax2pay/model": "^0.0.26",
     "authly": "^0.2.6",
+    "cloud-formdata": "^0.0.7",
     "cloud-http": "^0.0.24",
     "cloud-router": "^0.0.14",
     "gracely": "^0.1.7"

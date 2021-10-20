@@ -1,3 +1,4 @@
+compatibility_date = "2021-10-20"
 type = "webpack"
 name = "worker-user"
 webpack_config = "webpack.config.js"

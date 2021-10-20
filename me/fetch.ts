@@ -21,4 +21,4 @@ export async function fetch(request: http.Request): Promise<http.Response.Like |
 		result = await backend.auth.login(authorization.user, authorization.password ?? "", issuer)
 	return result
 }
-router.add("GET", "api/me", fetch)
+router.add("GET", "me", fetch)

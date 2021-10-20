@@ -1,14 +1,14 @@
 type = "webpack"
 name = "worker-user"
 webpack_config = "webpack.config.js"
-zone_id = "050f1dd73afd577957e1a3dbb69372a7"
-account_id = "87cbb87bdd7ea440c411c4ba8a69054b"
-routes = ["https://p2p.issuefab.net/api/user*", "https://p2p.issuefab.net/api/me*"]
+zone_id = "8c3bca9065a0e652495296dd5e3643d3"
+account_id = "b27394b70013aecc5971e5677e9476a2"
+routes = ["https://api.pax2pay.net/user*", "https://api.pax2pay.net/me*"]
 vars = { backendUrl = "https://qa.pax2pay.com/api/mpay2-service" }
 
 [env.development]
 	workers_dev = true
-	account_id = "87cbb87bdd7ea440c411c4ba8a69054b"
+	account_id = "b27394b70013aecc5971e5677e9476a2"
 	vars = { backendUrl = "https://qa.pax2pay.com/api/mpay2-service" }
 	[dev]
 		port = 8001

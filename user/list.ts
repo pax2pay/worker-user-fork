@@ -16,4 +16,4 @@ export async function list(request: http.Request): Promise<http.Response.Like | 
 		result = await backend.user.list()
 	return result
 }
-router.add("GET", "api/user", list)
+router.add("GET", "user", list)

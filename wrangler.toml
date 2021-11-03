@@ -1,16 +1,21 @@
-compatibility_date = "2021-10-20"
-type = "webpack"
+compatibility_date = "2021-10-21"
+type = "javascript"
 name = "worker-user"
-webpack_config = "webpack.config.js"
 zone_id = "8c3bca9065a0e652495296dd5e3643d3"
 account_id = "b27394b70013aecc5971e5677e9476a2"
+workers_dev = true
 routes = ["https://api.pax2pay.net/user*", "https://api.pax2pay.net/me*"]
 vars = { backendUrl = "https://qa.pax2pay.com/api/mpay2-service" }
 
+[build]
+command = "npm install && npm run build"
+[build.upload]
+format = "modules"
+main = "./index.mjs"
+
 [env.development]
 	workers_dev = true
-	account_id = "b27394b70013aecc5971e5677e9476a2"
-	vars = { backendUrl = "https://qa.pax2pay.com/api/mpay2-service" }
-	[dev]
-		port = 8001
-
+	account_id = "951c696c40f93ed3d14d39f65f327655"
+	vars = { backendUrl = "https://qa.pax2pay.com/api/mpay2-service", signingSecret = "MIIEogIBAAKCAQEAt5jV2gNDWcao0/5Sc3wMQW2GdxQJuLj3JXDmJK68WVVNHG8hZCsLIk6cp2oXCf2lArM8lcWsb/yB56A5AJW4gaWyzwglGOWzKpS0UXN5YtQ87J8H/VlS2PRE0i789Yu9nLdaF7is6jzSv+lJae/0HNayCqi9mAg167tpPZhBjjEMkb8imZNOoVdgKjPHtB2l93hbH1SDU/qX3d2aPd3EKB7OaMcNCnjXFV7t9AWojhPLyl1elfqfFB6EsqVtwEKvB0/JTj0jgmFwZMVYN1KeC3XQ1BBcjKI8DMe4bpEb+f6bLDlKwvxOomszXiX1LapGEOaiABXsTLs/lgK+ij3ZLwIDAQABAoIBAE1bEvepmk4QOwAfTuQjpxJGMHqpsbLoFBHtcLqR+P/2xeeuFzaaQDWzQ6PyOkTWXxk1JdjBEfeZP661Pm81pijSBPXgK6lC1uug/hy3d7ShUg4sr3Qal6KbwQeCDsjymPCX/Fi0Uf7bo7yCcZE2LfecqiV9lWyiQP3S1/PA3BYpc4QrQVTUVXzS/0oICdnUv6s4kKyzOUi4eKUmXJK+Sib3p/L/nd1XrRbisqPJnmx7wZHduq07tyF702YwQW722vqmDvN0q4TLvlE3Jd6e1e8DFWPC/XU4ygUo3XvU/XQ4eGfuw+GyrihqJhfPmLsEJ+IysHeguVtA4hQItkx9OqkCgYEA4+XmEtUqSsAGfosUvFTpzJjHz96ghXgHpQPvy4X7avVxNZeaQ/NstMwFCBXFGkP9LOiW/wFqa4HjJSk+06NoaSxaEG/WhsPhWcRghTt8q1PX6ZZGRb+TbzTrD7i1T6rGIPL4p0uxFtkk6Y+M70/uxZRDBaOWEiwd7Xzft/LIXQMCgYEAzjx6QHLM/Zoqc7axwk7x5l47sXvfHHaXbAbWa1nNqnJTRTlGEZuuuYKCQkulw+vRt9VsVBNLTiiZPjw0VDK2AVjljqc0cBmYP195WW8RUt4/tyw1RN3axOOgvm9lBlNM8SXy3ao989Q2JI55ICvqcR8eBNLvQwKoYL9EBwQoDWUCgYAaqUOgQmXfNtXLqhOz8K8la1482EupMaCbUnmUMsl1+t7SqTi36Ft4T0HrbziO2RNeVJuNm6nKh/h92XRrJ/vIChNDRwIu4+2SJeIw1APCu11QC2+PK1lhMiypuy8i8dSZ+DLUx4shJCgoVs3jFVPWs4CfwUKGP7kElo5Jo9KC5wKBgAKSLG/7PmT29AqHP4YNl+RoTlQzGB/xtoeJOkkSUIcMb89QHHiBuVbksp0C9mkP2ohxJ62QpAKwbOCivYBDNZOkuQ/jM7smBojbttaPlOa0kJTG/08BeQW1VL6rAtZmWXI0J+fthGIyxg4EnKvzADQy0Bv9STBLqy+xkraHrbwlAoGAR5OHfcnMyQ2xLTza63QYVvjKqdXJaQT46cFlNJUlrneQG/UxTaKMK15uY39GswU9/Eu6MR/SUXadU4RI1ovxmsyWJAUAS7od0D38PypXoEPj/07P+EEGd0cuk0DUCh4zCDswLf5/vjA2EJiAJMpA4EcJgUEpwEITcNhHaPBmo8c=" }
+[dev]
+	port = 8001

@@ -1,9 +1,11 @@
-import * as http from "cloud-http"
-import { router } from "./router"
+import { Context } from "./Context"
+import { Environment } from "./Environment"
 
 import "./me"
 import "./user"
 
-addEventListener("fetch", event => {
-	event.respondWith(router.handle(http.Request.from(event.request), {}).then(http.Response.to))
-})
+export default {
+	async fetch(request: Request, environment: Environment) {
+		return await Context.handle(request, environment)
+	},
+}

@@ -1,6 +1,6 @@
 import * as gracely from "gracely"
-import { FormData } from "cloud-formdata"
-import * as http from "cloud-http"
+import { FormData } from "cloudly-formdata"
+import * as http from "cloudly-http"
 import { Environment } from "./Environment"
 import { router } from "./router"
 

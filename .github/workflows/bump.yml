@@ -20,10 +20,12 @@ jobs:
         uses: "actions/setup-node@v2"
         with:
           node-version: 16
+      - name: Update NPM
+        run: npm install -g npm
       - name: "Version Bump"
         id: version-bump
         uses: "phips28/gh-action-bump-version@master"
         with:
-          tag-prefix: ''
+          tag-prefix: 'release-'
         env:
           GITHUB_TOKEN: ${{ secrets.ADMIN_TOKEN }}

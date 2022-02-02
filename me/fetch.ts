@@ -1,6 +1,6 @@
 import * as gracely from "gracely"
 import * as model from "@pax2pay/model"
-import * as http from "cloud-http"
+import * as http from "cloudly-http"
 import { Backend } from "../Backend"
 import { Context } from "../Context"
 import { router } from "../router"

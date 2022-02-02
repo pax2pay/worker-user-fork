@@ -10,7 +10,7 @@ export class Backend {
 		this.user = new User(client)
 	}
 	static create(backendUrl: string | undefined, token?: string) {
-		const client = Client.create(backendUrl, token)
+		const client = Client.create(backendUrl + "/mpay2-service", token)
 		return client && new Backend(client)
 	}
 }

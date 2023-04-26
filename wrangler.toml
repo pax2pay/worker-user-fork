@@ -1,6 +1,8 @@
 compatibility_date = "2023-04-13"
 type = "javascript"
 name = "userwidgets"
+account_id = "3a930658fc1846aa4537161cd1d58311"
+zone_id = "4c44412bd37c053484d71235d0ef1b1d"
 workers_dev = true
 routes = []
 

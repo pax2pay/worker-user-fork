@@ -1,17 +1,16 @@
 {
 	"files.exclude": {
 		".*": true,
-		"*.json": true,
-		"dist": true,
-		"README.md": true,
-		"LICENSE": true,
-		"CODEOWNERS": true,
-		"**/tsconfig.*": true,
-		"node_modules": true,
 		"*.code-workspace": true,
 		"*.config.js": true,
-		"*.toml": true,
-    "stencil.config.ts": true,
+		"*.json": true,
+		"**/tsconfig.*": true,
+		"CODEOWNERS": true,
+		"dist": true,
+		"LICENSE": true,
+		"node_modules": true,
+		"README.md": true,
+		"stencil.config.ts": true
 	},
 	"editor.tabSize": 2,
 	"editor.detectIndentation": false,
@@ -40,6 +39,6 @@
 		"uply",
 		"userwidgets"
 	],
-  "debug.javascript.autoAttachFilter": "disabled",
+	"debug.javascript.autoAttachFilter": "disabled",
 	"liveServer.settings.root": "/dist"
 }

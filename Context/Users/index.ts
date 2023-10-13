@@ -68,10 +68,17 @@ export class Users {
 			).get<model.Application>("application")
 			gracely.Error.is(application)
 				? (result = application)
-				: (result.permissions = {
+				: (result.permissions = this.permissionsToString({
 						...Object.fromEntries(Object.keys(application.organizations).map(id => [id, {}])),
 						...result.permissions,
-				  })
+				  }) as any)
+		}
+		return result
+	}
+	permissionsToString(permissions: Record<string, any>, prefix = ""): string {
+		let result = ""
+		for (const [key, value] of Object.entries(permissions)) {
+			result += typeof value == "boolean" ? `${prefix + key} ` : this.permissionsToString(value, `${prefix + key}.`)
 		}
 		return result
 	}
